@@ -1,0 +1,1060 @@
+{
+  "rules": [
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 0",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 0.0
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 0",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.7459871038953824
+      },
+      "fired": true,
+      "recommendation": "Prioritise retaining this scene.",
+      "explanation": "Speech relevance is high, so the scene carries core content."
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 0",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 7.5,
+        "importance": 60.47
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 1",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 3.85
+      },
+      "fired": true,
+      "recommendation": "Trim the silent interval(s), keeping speech padding.",
+      "explanation": "Silence longer than the configured threshold was detected and silence removal is enabled."
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 1",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.5702917558860073
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 1",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 3.65,
+        "importance": 40.25
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 2",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 0.0
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 2",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.9607106587782029
+      },
+      "fired": true,
+      "recommendation": "Prioritise retaining this scene.",
+      "explanation": "Speech relevance is high, so the scene carries core content."
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 2",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 7.5,
+        "importance": 91.11
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 3",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 5.85
+      },
+      "fired": true,
+      "recommendation": "Trim the silent interval(s), keeping speech padding.",
+      "explanation": "Silence longer than the configured threshold was detected and silence removal is enabled."
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 3",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.0
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 3",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 1.65,
+        "importance": 27.12
+      },
+      "fired": true,
+      "recommendation": "Exclude this scene from the candidate set.",
+      "explanation": "Scene is shorter than the minimum length and its importance is low."
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 4",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 0.0
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 4",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.6563877600413028
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 4",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 7.5,
+        "importance": 68.1
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 5",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 2.8499999999999996
+      },
+      "fired": true,
+      "recommendation": "Trim the silent interval(s), keeping speech padding.",
+      "explanation": "Silence longer than the configured threshold was detected and silence removal is enabled."
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 5",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.6333990405858599
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 5",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 4.65,
+        "importance": 57.5
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 6",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 0.0
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 6",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.8627594029061222
+      },
+      "fired": true,
+      "recommendation": "Prioritise retaining this scene.",
+      "explanation": "Speech relevance is high, so the scene carries core content."
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 6",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 7.5,
+        "importance": 67.65
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 7",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 6.85
+      },
+      "fired": true,
+      "recommendation": "Trim the silent interval(s), keeping speech padding.",
+      "explanation": "Silence longer than the configured threshold was detected and silence removal is enabled."
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 7",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.0
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 7",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 0.65,
+        "importance": 11.96
+      },
+      "fired": true,
+      "recommendation": "Exclude this scene from the candidate set.",
+      "explanation": "Scene is shorter than the minimum length and its importance is low."
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 8",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 0.0
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 8",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.9089345117036299
+      },
+      "fired": true,
+      "recommendation": "Prioritise retaining this scene.",
+      "explanation": "Speech relevance is high, so the scene carries core content."
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 8",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 6.25,
+        "importance": 81.25
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 9",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 2.35
+      },
+      "fired": true,
+      "recommendation": "Trim the silent interval(s), keeping speech padding.",
+      "explanation": "Silence longer than the configured threshold was detected and silence removal is enabled."
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 9",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.9163418806490737
+      },
+      "fired": true,
+      "recommendation": "Prioritise retaining this scene.",
+      "explanation": "Speech relevance is high, so the scene carries core content."
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 9",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 3.9,
+        "importance": 70.65
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 10",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 2.3499999999999996
+      },
+      "fired": true,
+      "recommendation": "Trim the silent interval(s), keeping speech padding.",
+      "explanation": "Silence longer than the configured threshold was detected and silence removal is enabled."
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 10",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.763347177145644
+      },
+      "fired": true,
+      "recommendation": "Prioritise retaining this scene.",
+      "explanation": "Speech relevance is high, so the scene carries core content."
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 10",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 3.91,
+        "importance": 76.75
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 11",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 0.0
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 11",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.6379555912225029
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 11",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 6.28,
+        "importance": 74.68
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 12",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 2.85
+      },
+      "fired": true,
+      "recommendation": "Trim the silent interval(s), keeping speech padding.",
+      "explanation": "Silence longer than the configured threshold was detected and silence removal is enabled."
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 12",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.0
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 12",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 2.11,
+        "importance": 33.71
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 13",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 0.34999999999999964
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 13",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.8376726423800371
+      },
+      "fired": true,
+      "recommendation": "Prioritise retaining this scene.",
+      "explanation": "Speech relevance is high, so the scene carries core content."
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 13",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 7.15,
+        "importance": 65.94
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 14",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 7.5
+      },
+      "fired": true,
+      "recommendation": "Trim the silent interval(s), keeping speech padding.",
+      "explanation": "Silence longer than the configured threshold was detected and silence removal is enabled."
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 14",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.0
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 14",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 0,
+        "importance": 11.19
+      },
+      "fired": true,
+      "recommendation": "Exclude this scene from the candidate set.",
+      "explanation": "Scene is shorter than the minimum length and its importance is low."
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 15",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 0.0
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 15",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 1.0
+      },
+      "fired": true,
+      "recommendation": "Prioritise retaining this scene.",
+      "explanation": "Speech relevance is high, so the scene carries core content."
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 15",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 7.5,
+        "importance": 70.01
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R1",
+      "name": "Trim silent intervals",
+      "scope": "scene",
+      "target": "scene 16",
+      "condition": "IF remove_silence AND silence_duration > <silence_threshold> THEN trim_silence = True",
+      "facts_evaluated": {
+        "remove_silence": true,
+        "silence_duration": 3.85
+      },
+      "fired": true,
+      "recommendation": "Trim the silent interval(s), keeping speech padding.",
+      "explanation": "Silence longer than the configured threshold was detected and silence removal is enabled."
+    },
+    {
+      "rule_id": "R2",
+      "name": "Retain high-relevance speech",
+      "scope": "scene",
+      "target": "scene 16",
+      "condition": "IF speech_relevance_norm >= <high_relevance> THEN priority_retain = True",
+      "facts_evaluated": {
+        "speech_relevance_norm": 0.6019725870101109
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R3",
+      "name": "Drop short, low-value scene",
+      "scope": "scene",
+      "target": "scene 16",
+      "condition": "IF scene_duration < <min_scene_len> AND importance < <low_importance> THEN exclude_candidate = True",
+      "facts_evaluated": {
+        "scene_duration": 3.65,
+        "importance": 41.44
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R4",
+      "name": "Vertical reframing",
+      "scope": "global",
+      "target": "project",
+      "condition": "IF aspect_ratio == '9:16' THEN reframe_scheduled = True",
+      "facts_evaluated": {
+        "aspect_ratio": "9:16"
+      },
+      "fired": true,
+      "recommendation": "Apply vertical (9:16) reframing.",
+      "explanation": "Target aspect ratio is 9:16."
+    },
+    {
+      "rule_id": "R5",
+      "name": "Generate subtitles from transcript",
+      "scope": "global",
+      "target": "project",
+      "condition": "IF subtitles_enabled AND has_transcript THEN subtitles_scheduled = True",
+      "facts_evaluated": {
+        "subtitles_enabled": true,
+        "has_transcript": true
+      },
+      "fired": true,
+      "recommendation": "Generate subtitles from transcript timestamps.",
+      "explanation": "Subtitles requested and transcript available."
+    },
+    {
+      "rule_id": "R5b",
+      "name": "Subtitles requested without transcript",
+      "scope": "global",
+      "target": "project",
+      "condition": "IF subtitles_enabled AND NOT has_transcript THEN subtitles_blocked = True",
+      "facts_evaluated": {
+        "subtitles_enabled": true,
+        "has_transcript": true
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R7",
+      "name": "Mix background music with ducking",
+      "scope": "global",
+      "target": "project",
+      "condition": "IF music_enabled THEN music_ducking = True",
+      "facts_evaluated": {
+        "music_enabled": false
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R8",
+      "name": "Focus-aware crop",
+      "scope": "global",
+      "target": "project",
+      "condition": "IF reframe_scheduled AND source_wider_than_target THEN focus_crop = True",
+      "facts_evaluated": {
+        "reframe_scheduled": true,
+        "source_wider_than_target": true
+      },
+      "fired": true,
+      "recommendation": "Crop around the detected motion focus instead of the frame centre.",
+      "explanation": "Vertical reframing is scheduled and the source is wider than the target."
+    },
+    {
+      "rule_id": "R9",
+      "name": "Short-form profile",
+      "scope": "global",
+      "target": "project",
+      "condition": "IF reframe_scheduled AND target_duration <= 60 THEN short_form_profile = True",
+      "facts_evaluated": {
+        "reframe_scheduled": true,
+        "target_duration": 30.0
+      },
+      "fired": true,
+      "recommendation": "Treat as short-form content (fast pacing, burned-in captions).",
+      "explanation": "Vertical output of 60 s or less matches short-form platform conventions."
+    },
+    {
+      "rule_id": "R10",
+      "name": "Loudness normalisation",
+      "scope": "global",
+      "target": "project",
+      "condition": "IF normalize_audio THEN loudnorm = True",
+      "facts_evaluated": {
+        "normalize_audio": true
+      },
+      "fired": true,
+      "recommendation": "Apply EBU R128 loudness normalisation.",
+      "explanation": "Audio normalisation enabled."
+    },
+    {
+      "rule_id": "G1",
+      "name": "Vertical reel ready",
+      "scope": "global",
+      "target": "project",
+      "condition": "IF aspect_ratio == '9:16' AND reframe_scheduled AND resolution_vertical AND duration_ok_for_short_form THEN vertical_reel_ready = True",
+      "facts_evaluated": {
+        "aspect_ratio": "9:16",
+        "reframe_scheduled": true,
+        "resolution_vertical": true,
+        "duration_ok_for_short_form": true
+      },
+      "fired": true,
+      "recommendation": "All requirements for a vertical reel are satisfied.",
+      "explanation": "9:16 aspect, reframing scheduled, vertical resolution and short-form duration."
+    },
+    {
+      "rule_id": "G2",
+      "name": "Vertical resolution",
+      "scope": "global",
+      "target": "project",
+      "condition": "IF out_height > <out_width> THEN resolution_vertical = True",
+      "facts_evaluated": {
+        "out_height": 1920
+      },
+      "fired": true,
+      "recommendation": "Output is portrait.",
+      "explanation": "Height exceeds width."
+    },
+    {
+      "rule_id": "G3",
+      "name": "Duration fits short-form",
+      "scope": "global",
+      "target": "project",
+      "condition": "IF target_duration <= 90 THEN duration_ok_for_short_form = True",
+      "facts_evaluated": {
+        "target_duration": 30.0
+      },
+      "fired": true,
+      "recommendation": "Duration fits Reels/Shorts limits.",
+      "explanation": "Target duration is <= 90 s."
+    },
+    {
+      "rule_id": "R6",
+      "name": "Transition at poor continuity",
+      "scope": "transition",
+      "target": "0->2",
+      "condition": "IF visual_discontinuity > <continuity_threshold> AND transitions_enabled THEN transition_needed = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.8936,
+        "transitions_enabled": true
+      },
+      "fired": true,
+      "recommendation": "Insert a transition between these scenes.",
+      "explanation": "Consecutive scenes differ strongly in appearance."
+    },
+    {
+      "rule_id": "R6b",
+      "name": "Soft dissolve for jump cuts",
+      "scope": "transition",
+      "target": "0->2",
+      "condition": "IF visual_discontinuity <= <continuity_threshold> AND transitions_enabled THEN transition_soft = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.8936,
+        "transitions_enabled": true
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R6",
+      "name": "Transition at poor continuity",
+      "scope": "transition",
+      "target": "2->6",
+      "condition": "IF visual_discontinuity > <continuity_threshold> AND transitions_enabled THEN transition_needed = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.652,
+        "transitions_enabled": true
+      },
+      "fired": true,
+      "recommendation": "Insert a transition between these scenes.",
+      "explanation": "Consecutive scenes differ strongly in appearance."
+    },
+    {
+      "rule_id": "R6b",
+      "name": "Soft dissolve for jump cuts",
+      "scope": "transition",
+      "target": "2->6",
+      "condition": "IF visual_discontinuity <= <continuity_threshold> AND transitions_enabled THEN transition_soft = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.652,
+        "transitions_enabled": true
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R6",
+      "name": "Transition at poor continuity",
+      "scope": "transition",
+      "target": "6->8",
+      "condition": "IF visual_discontinuity > <continuity_threshold> AND transitions_enabled THEN transition_needed = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 1.0,
+        "transitions_enabled": true
+      },
+      "fired": true,
+      "recommendation": "Insert a transition between these scenes.",
+      "explanation": "Consecutive scenes differ strongly in appearance."
+    },
+    {
+      "rule_id": "R6b",
+      "name": "Soft dissolve for jump cuts",
+      "scope": "transition",
+      "target": "6->8",
+      "condition": "IF visual_discontinuity <= <continuity_threshold> AND transitions_enabled THEN transition_soft = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 1.0,
+        "transitions_enabled": true
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R6",
+      "name": "Transition at poor continuity",
+      "scope": "transition",
+      "target": "8->9",
+      "condition": "IF visual_discontinuity > <continuity_threshold> AND transitions_enabled THEN transition_needed = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.0032,
+        "transitions_enabled": true
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R6b",
+      "name": "Soft dissolve for jump cuts",
+      "scope": "transition",
+      "target": "8->9",
+      "condition": "IF visual_discontinuity <= <continuity_threshold> AND transitions_enabled THEN transition_soft = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.0032,
+        "transitions_enabled": true
+      },
+      "fired": true,
+      "recommendation": "Use a gentle dissolve to smooth this jump cut.",
+      "explanation": "Scenes are visually continuous (typical for talking heads after silence removal), so a soft dissolve hides the cut."
+    },
+    {
+      "rule_id": "R6",
+      "name": "Transition at poor continuity",
+      "scope": "transition",
+      "target": "9->10",
+      "condition": "IF visual_discontinuity > <continuity_threshold> AND transitions_enabled THEN transition_needed = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.0008,
+        "transitions_enabled": true
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R6b",
+      "name": "Soft dissolve for jump cuts",
+      "scope": "transition",
+      "target": "9->10",
+      "condition": "IF visual_discontinuity <= <continuity_threshold> AND transitions_enabled THEN transition_soft = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.0008,
+        "transitions_enabled": true
+      },
+      "fired": true,
+      "recommendation": "Use a gentle dissolve to smooth this jump cut.",
+      "explanation": "Scenes are visually continuous (typical for talking heads after silence removal), so a soft dissolve hides the cut."
+    },
+    {
+      "rule_id": "R6",
+      "name": "Transition at poor continuity",
+      "scope": "transition",
+      "target": "10->13",
+      "condition": "IF visual_discontinuity > <continuity_threshold> AND transitions_enabled THEN transition_needed = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.9657,
+        "transitions_enabled": true
+      },
+      "fired": true,
+      "recommendation": "Insert a transition between these scenes.",
+      "explanation": "Consecutive scenes differ strongly in appearance."
+    },
+    {
+      "rule_id": "R6b",
+      "name": "Soft dissolve for jump cuts",
+      "scope": "transition",
+      "target": "10->13",
+      "condition": "IF visual_discontinuity <= <continuity_threshold> AND transitions_enabled THEN transition_soft = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.9657,
+        "transitions_enabled": true
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    },
+    {
+      "rule_id": "R6",
+      "name": "Transition at poor continuity",
+      "scope": "transition",
+      "target": "13->15",
+      "condition": "IF visual_discontinuity > <continuity_threshold> AND transitions_enabled THEN transition_needed = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.919,
+        "transitions_enabled": true
+      },
+      "fired": true,
+      "recommendation": "Insert a transition between these scenes.",
+      "explanation": "Consecutive scenes differ strongly in appearance."
+    },
+    {
+      "rule_id": "R6b",
+      "name": "Soft dissolve for jump cuts",
+      "scope": "transition",
+      "target": "13->15",
+      "condition": "IF visual_discontinuity <= <continuity_threshold> AND transitions_enabled THEN transition_soft = True",
+      "facts_evaluated": {
+        "visual_discontinuity": 0.919,
+        "transitions_enabled": true
+      },
+      "fired": false,
+      "recommendation": "",
+      "explanation": "Premises not satisfied"
+    }
+  ],
+  "facts": {
+    "aspect_ratio": "9:16",
+    "target_duration": 30.0,
+    "subtitles_enabled": true,
+    "has_transcript": true,
+    "music_enabled": false,
+    "normalize_audio": true,
+    "out_width": 1080,
+    "out_height": 1920,
+    "source_wider_than_target": true,
+    "reframe_scheduled": true,
+    "subtitles_scheduled": true,
+    "focus_crop": true,
+    "short_form_profile": true,
+    "loudnorm": true,
+    "resolution_vertical": true,
+    "duration_ok_for_short_form": true,
+    "vertical_reel_ready": true
+  },
+  "backward": {
+    "goal": "vertical_reel_ready",
+    "proved": true,
+    "via": "fact",
+    "children": [],
+    "unmet_requirements": []
+  }
+}

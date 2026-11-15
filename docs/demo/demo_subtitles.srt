@@ -1,0 +1,72 @@
+1
+00:00:00,400 --> 00:00:02,360
+welcome to this introduction
+
+2
+00:00:02,360 --> 00:00:04,320
+to artificial intelligence in
+
+3
+00:00:04,320 --> 00:00:05,300
+video editing
+
+4
+00:00:05,900 --> 00:00:07,100
+today we explore
+
+5
+00:00:07,100 --> 00:00:08,660
+first the agent perceives
+
+6
+00:00:08,660 --> 00:00:10,220
+the video and detects
+
+7
+00:00:10,220 --> 00:00:10,800
+every scene
+
+8
+00:00:10,800 --> 00:00:13,500
+the most important moments
+
+9
+00:00:13,500 --> 00:00:15,260
+a star search orders
+
+10
+00:00:15,260 --> 00:00:16,428
+the scenes to keep
+
+11
+00:00:16,428 --> 00:00:18,383
+solver guarantees the duration
+
+12
+00:00:18,383 --> 00:00:19,550
+and format rules
+
+13
+00:00:19,550 --> 00:00:21,950
+an expert system adds
+
+14
+00:00:21,950 --> 00:00:22,510
+subtitles transitions
+
+15
+00:00:22,510 --> 00:00:25,710
+finally ffmpeg renders and
+
+16
+00:00:25,710 --> 00:00:26,210
+verifies
+
+17
+00:00:26,210 --> 00:00:28,170
+the result is a
+
+18
+00:00:28,170 --> 00:00:29,150
+short vertical
+

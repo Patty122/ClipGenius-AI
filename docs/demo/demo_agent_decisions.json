@@ -1,0 +1,130 @@
+[
+  {
+    "decision_id": 1,
+    "phase": "perceive",
+    "agent_name": "Video Perception Agent",
+    "decision": "Metadata: 1280x720 @ 25.0 fps, 120.0s, video=h264, audio=aac",
+    "explanation": "Read with FFprobe",
+    "timestamp": "2026-11-11T04:23:46.742245"
+  },
+  {
+    "decision_id": 2,
+    "phase": "perceive",
+    "agent_name": "Speech Analysis Agent",
+    "decision": "Audio activity 80.0s, silence 40.0s (8 silent interval(s))",
+    "explanation": "FFmpeg silencedetect noise=-35.0dB min=0.5s",
+    "timestamp": "2026-11-11T04:23:47.143964"
+  },
+  {
+    "decision_id": 3,
+    "phase": "perceive",
+    "agent_name": "Speech Analysis Agent",
+    "decision": "Transcript: 14 segment(s) from imported",
+    "explanation": "language=None",
+    "timestamp": "2026-11-11T04:23:47.147504"
+  },
+  {
+    "decision_id": 4,
+    "phase": "perceive",
+    "agent_name": "Video Perception Agent",
+    "decision": "Detected 17 scene(s)",
+    "explanation": "PySceneDetect ContentDetector(threshold=27.0) found 9 visual scene(s); split 15.0s scene [0.0-15.0] into 2 parts (window-based); split 15.0s scene [15.0-30.0] into 2 parts (window-based); split 15.0s scene [30.0-45.0] into 2 parts (window-based); split 15.0s scene [45.0-60.0] into 2 parts (window-based); split 18.8s scene [60.0-78.8] into 3 parts (pause-based); split 15.0s scene [90.0-105.0] into 2 parts (window-based); split 15.0s scene [105.0-120.0] into 2 parts (window-based)",
+    "timestamp": "2026-11-11T04:23:56.768524"
+  },
+  {
+    "decision_id": 5,
+    "phase": "perceive",
+    "agent_name": "Scene Evaluation Agent",
+    "decision": "Scored 17 scene(s); top: #2=91, #8=81, #10=77",
+    "explanation": "Score 91.1/100. speech relevance contributed 36.0 pts (normalised 0.96, weight 0.37); speech activity contributed 25.0 pts (normalised 1.00, weight 0.25); visual activity contributed 15.6 pts (normalised 0.83, weight 0.19). Unavailable features (topic_relevance) were excluded and the other weights renormalised.",
+    "timestamp": "2026-11-11T04:24:05.759646"
+  },
+  {
+    "decision_id": 6,
+    "phase": "evaluate",
+    "agent_name": "Video Perception Agent",
+    "decision": "Analysis finished in 19.1s",
+    "explanation": "Results persisted",
+    "timestamp": "2026-11-11T04:24:05.767334"
+  },
+  {
+    "decision_id": 7,
+    "phase": "understand",
+    "agent_name": "Editing Planner Agent",
+    "decision": "Interpreted instruction via local-parser: 30s, 9:16, 1080x1920, silence_removal=True, subtitles=True, transitions=smooth",
+    "explanation": "vertical platform keywords -> 9:16; duration 30.0s from text",
+    "timestamp": "2026-11-11T04:24:05.785012"
+  },
+  {
+    "decision_id": 8,
+    "phase": "decide",
+    "agent_name": "Editing Planner Agent",
+    "decision": "Expert system (scene scope): 8 scene(s) prioritised, 3 excluded",
+    "explanation": "scene 3: R3: short and low importance; scene 7: R3: short and low importance; scene 14: R3: short and low importance",
+    "timestamp": "2026-11-11T04:24:05.793239"
+  },
+  {
+    "decision_id": 9,
+    "phase": "decide",
+    "agent_name": "Scene Evaluation Agent",
+    "decision": "Selected 8 candidate scene(s) totalling 51.2s usable content (target 30s)",
+    "explanation": "Highest importance first until 1.5x target duration or candidate limit reached",
+    "timestamp": "2026-11-11T04:24:05.793966"
+  },
+  {
+    "decision_id": 10,
+    "phase": "decide",
+    "agent_name": "Editing Planner Agent",
+    "decision": "Sequencing A*: order [0, 2, 6, 8, 9, 10, 13, 15]; A* cost 2.717 vs chronological 2.717 (76 expanded, 361 states, optimal)",
+    "explanation": "Exact A*: admissible MST heuristic, goal tested on expansion, re-opening allowed",
+    "timestamp": "2026-11-11T04:24:05.800285"
+  },
+  {
+    "decision_id": 11,
+    "phase": "decide",
+    "agent_name": "Editing Planner Agent",
+    "decision": "Expert system fired rules: G1, G2, G3, R1, R10, R2, R3, R4, R5, R6, R6b, R8, R9",
+    "explanation": "Forward chaining to fixed point per scope; backward chaining: vertical_reel_ready = True",
+    "timestamp": "2026-11-11T04:24:05.823685"
+  },
+  {
+    "decision_id": 12,
+    "phase": "validate",
+    "agent_name": "Constraint Validation Agent",
+    "decision": "CSP satisfied in 16 nodes / 4 backtracks; independent validation: valid",
+    "explanation": "All 11 checks passed; final duration 29.31s",
+    "timestamp": "2026-11-11T04:24:05.824502"
+  },
+  {
+    "decision_id": 13,
+    "phase": "plan",
+    "agent_name": "Editing Planner Agent",
+    "decision": "Plan pl_02919e4e5103 valid: 8 clip(s), 29.3s",
+    "explanation": "Kept 8 of 17 scenes; astar order [0, 2, 6, 8, 9, 10, 13, 15]; Removed ~2.3s of silence in 1 interval(s); 0.15s padding kept around speech; Focus-aware crop to 1080x1920; 18 cues, style=animated, position=lower; 7 smooth transition(s) of 0.8s; EBU R128 loudness normalisation, 0.3s fade-in / 0.5s fade-out",
+    "timestamp": "2026-11-11T04:24:05.828016"
+  },
+  {
+    "decision_id": 14,
+    "phase": "validate",
+    "agent_name": "Constraint Validation Agent",
+    "decision": "Pre-render validation passed (11 checks)",
+    "explanation": "Render gate",
+    "timestamp": "2026-11-11T04:24:05.847219"
+  },
+  {
+    "decision_id": 15,
+    "phase": "act",
+    "agent_name": "Rendering Agent",
+    "decision": "Rendering final 1080x1920, 8 clip(s), expected 29.3s",
+    "explanation": "FFmpeg filter_complex",
+    "timestamp": "2026-11-11T04:24:05.848834"
+  },
+  {
+    "decision_id": 16,
+    "phase": "evaluate",
+    "agent_name": "Rendering Agent",
+    "decision": "Output verified: 29.37s 1080x1920 h264",
+    "explanation": "9 FFprobe/decode checks passed",
+    "timestamp": "2026-11-11T04:24:56.652491"
+  }
+]

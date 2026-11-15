@@ -1,0 +1,13 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+pydantic-settings>=2.2
+sqlalchemy>=2.0
+python-multipart>=0.0.9
+numpy>=1.26
+opencv-python-headless>=4.9
+scikit-learn>=1.4
+scenedetect>=0.6.4
+faster-whisper>=1.0
+httpx>=0.27
+pytest>=8.0

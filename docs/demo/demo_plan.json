@@ -1,0 +1,268 @@
+{
+  "config": {
+    "target_duration": 30.0,
+    "duration_tolerance": 1.0,
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "quality": "1080p",
+    "remove_silence": true,
+    "preserve_speech": true,
+    "subtitles": true,
+    "subtitle_style": "animated",
+    "subtitle_size": 60,
+    "subtitle_color": "#FFFFFF",
+    "subtitle_position": null,
+    "transition_style": "smooth",
+    "music_enabled": false,
+    "normalize_audio": true,
+    "color_preset": "none",
+    "sequencing": "astar",
+    "topic": null,
+    "min_scene_len": 2.0,
+    "max_candidates": 9,
+    "output_format": "mp4"
+  },
+  "clips": [
+    {
+      "scene_id": 0,
+      "order": 0,
+      "duration": 7.5,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 7.5
+        }
+      ],
+      "importance": 60.47,
+      "focus_x": 0.4366,
+      "thumbnail": "scene_0.jpg",
+      "transition_in": {
+        "type": "none",
+        "duration": 0.0,
+        "discontinuity": null
+      },
+      "rationale": "importance 60; R2 priority; speech relevance contributed 28.0 pts (normalised 0.75, weight 0.37); speech activity contributed 25.0 pts (normalised 1.00, weight 0.25); visual activity contributed 7.5 pts (normalised 0.40, weight 0.19)"
+    },
+    {
+      "scene_id": 2,
+      "order": 1,
+      "duration": 4.5,
+      "segments": [
+        {
+          "start": 15.0,
+          "end": 19.5
+        }
+      ],
+      "importance": 91.11,
+      "focus_x": 0.5772,
+      "thumbnail": "scene_2.jpg",
+      "transition_in": {
+        "type": "fadeblack",
+        "duration": 0.8,
+        "discontinuity": 0.8936
+      },
+      "rationale": "importance 91; R2 priority; speech relevance contributed 36.0 pts (normalised 0.96, weight 0.37); speech activity contributed 25.0 pts (normalised 1.00, weight 0.25); visual activity contributed 15.6 pts (normalised 0.83, weight 0.19)"
+    },
+    {
+      "scene_id": 6,
+      "order": 2,
+      "duration": 3.5,
+      "segments": [
+        {
+          "start": 45.0,
+          "end": 48.5
+        }
+      ],
+      "importance": 67.65,
+      "focus_x": 0.5,
+      "thumbnail": "scene_6.jpg",
+      "transition_in": {
+        "type": "fadeblack",
+        "duration": 0.8,
+        "discontinuity": 0.652
+      },
+      "rationale": "importance 68; R2 priority; speech relevance contributed 32.4 pts (normalised 0.86, weight 0.37); speech activity contributed 25.0 pts (normalised 1.00, weight 0.25); distinctiveness contributed 10.3 pts (normalised 0.55, weight 0.19)"
+    },
+    {
+      "scene_id": 8,
+      "order": 3,
+      "duration": 4.0,
+      "segments": [
+        {
+          "start": 60.0,
+          "end": 64.0
+        }
+      ],
+      "importance": 81.25,
+      "focus_x": 0.4669,
+      "thumbnail": "scene_8.jpg",
+      "transition_in": {
+        "type": "fadeblack",
+        "duration": 0.8,
+        "discontinuity": 1.0
+      },
+      "rationale": "importance 81; R2 priority; speech relevance contributed 34.1 pts (normalised 0.91, weight 0.37); speech activity contributed 25.0 pts (normalised 1.00, weight 0.25); distinctiveness contributed 16.7 pts (normalised 0.89, weight 0.19)"
+    },
+    {
+      "scene_id": 9,
+      "order": 4,
+      "duration": 3.5,
+      "segments": [
+        {
+          "start": 66.25,
+          "end": 69.75
+        }
+      ],
+      "importance": 70.65,
+      "focus_x": 0.4679,
+      "thumbnail": "scene_9.jpg",
+      "transition_in": {
+        "type": "dissolve",
+        "duration": 0.8,
+        "discontinuity": 0.0032
+      },
+      "rationale": "importance 71; R2 priority; speech relevance contributed 34.4 pts (normalised 0.92, weight 0.37); distinctiveness contributed 16.7 pts (normalised 0.89, weight 0.19); speech activity contributed 15.0 pts (normalised 0.60, weight 0.25)"
+    },
+    {
+      "scene_id": 10,
+      "order": 5,
+      "duration": 3.91,
+      "segments": [
+        {
+          "start": 74.85,
+          "end": 78.76
+        }
+      ],
+      "importance": 76.75,
+      "focus_x": 0.4972,
+      "thumbnail": "scene_10.jpg",
+      "transition_in": {
+        "type": "dissolve",
+        "duration": 0.8,
+        "discontinuity": 0.0008
+      },
+      "rationale": "importance 77; R2 priority; speech relevance contributed 28.6 pts (normalised 0.76, weight 0.37); visual activity contributed 18.7 pts (normalised 1.00, weight 0.19); speech activity contributed 15.0 pts (normalised 0.60, weight 0.25)"
+    },
+    {
+      "scene_id": 13,
+      "order": 6,
+      "duration": 4.5,
+      "segments": [
+        {
+          "start": 90.0,
+          "end": 94.5
+        }
+      ],
+      "importance": 65.94,
+      "focus_x": 0.5,
+      "thumbnail": "scene_13.jpg",
+      "transition_in": {
+        "type": "fadeblack",
+        "duration": 0.8,
+        "discontinuity": 0.9657
+      },
+      "rationale": "importance 66; R2 priority; speech relevance contributed 31.4 pts (normalised 0.84, weight 0.37); speech activity contributed 23.3 pts (normalised 0.93, weight 0.25); distinctiveness contributed 11.2 pts (normalised 0.60, weight 0.19)"
+    },
+    {
+      "scene_id": 15,
+      "order": 7,
+      "duration": 3.5,
+      "segments": [
+        {
+          "start": 105.0,
+          "end": 108.5
+        }
+      ],
+      "importance": 70.01,
+      "focus_x": 0.4365,
+      "thumbnail": "scene_15.jpg",
+      "transition_in": {
+        "type": "fadeblack",
+        "duration": 0.8,
+        "discontinuity": 0.919
+      },
+      "rationale": "importance 70; R2 priority; speech relevance contributed 37.5 pts (normalised 1.00, weight 0.37); speech activity contributed 25.0 pts (normalised 1.00, weight 0.25); visual activity contributed 7.5 pts (normalised 0.40, weight 0.19)"
+    }
+  ],
+  "removed_scenes": [
+    {
+      "scene_id": 1,
+      "reason": "not selected: lower importance than chosen scenes"
+    },
+    {
+      "scene_id": 3,
+      "reason": "R3: short and low importance"
+    },
+    {
+      "scene_id": 4,
+      "reason": "not selected: lower importance than chosen scenes"
+    },
+    {
+      "scene_id": 5,
+      "reason": "not selected: lower importance than chosen scenes"
+    },
+    {
+      "scene_id": 7,
+      "reason": "R3: short and low importance"
+    },
+    {
+      "scene_id": 11,
+      "reason": "not selected: lower importance than chosen scenes"
+    },
+    {
+      "scene_id": 12,
+      "reason": "not selected: lower importance than chosen scenes"
+    },
+    {
+      "scene_id": 14,
+      "reason": "R3: short and low importance"
+    },
+    {
+      "scene_id": 16,
+      "reason": "not selected: lower importance than chosen scenes"
+    }
+  ],
+  "operations": [
+    {
+      "op": "select_scenes",
+      "detail": "Kept 8 of 17 scenes"
+    },
+    {
+      "op": "sequence",
+      "detail": "astar order [0, 2, 6, 8, 9, 10, 13, 15]"
+    },
+    {
+      "op": "trim_silence",
+      "detail": "Removed ~2.3s of silence in 1 interval(s); 0.15s padding kept around speech"
+    },
+    {
+      "op": "reframe",
+      "detail": "Focus-aware crop to 1080x1920"
+    },
+    {
+      "op": "subtitles",
+      "detail": "18 cues, style=animated, position=lower"
+    },
+    {
+      "op": "transitions",
+      "detail": "7 smooth transition(s) of 0.8s"
+    },
+    {
+      "op": "audio",
+      "detail": "EBU R128 loudness normalisation, 0.3s fade-in / 0.5s fade-out"
+    }
+  ],
+  "output": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 29.31,
+    "aspect": "9:16"
+  },
+  "validation": {
+    "status": "valid",
+    "violations": [],
+    "checked": 11
+  },
+  "warnings": []
+}

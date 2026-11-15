@@ -1,0 +1,236 @@
+{
+  "status": "satisfied",
+  "assignment": {
+    "aspect": "9:16",
+    "resolution": "1080x1920",
+    "sub_pos": "lower",
+    "trans": 0.8,
+    "dur_10": 3.91,
+    "dur_9": 3.5,
+    "dur_8": 4.0,
+    "dur_2": 4.5,
+    "dur_15": 3.5,
+    "dur_6": 3.5,
+    "dur_13": 4.5,
+    "dur_0": 7.5
+  },
+  "nodes": 16,
+  "backtracks": 4,
+  "pruned_values": 65,
+  "seconds": 0.00545,
+  "exhausted": true,
+  "failed_constraints": {
+    "target_duration": 64,
+    "subtitle_in_safe_area": 1
+  },
+  "trace": [
+    {
+      "var": "aspect",
+      "value": "9:16",
+      "consistent": true,
+      "violated": null,
+      "depth": 1
+    },
+    {
+      "var": "resolution",
+      "value": "1080x1920",
+      "consistent": true,
+      "violated": null,
+      "depth": 2
+    },
+    {
+      "var": "sub_pos",
+      "value": "lower",
+      "consistent": true,
+      "violated": null,
+      "depth": 3
+    },
+    {
+      "var": "trans",
+      "value": 0.8,
+      "consistent": true,
+      "violated": null,
+      "depth": 4
+    },
+    {
+      "var": "dur_10",
+      "value": 3.91,
+      "consistent": true,
+      "violated": null,
+      "depth": 5
+    },
+    {
+      "var": "dur_9",
+      "value": 3.5,
+      "consistent": true,
+      "violated": null,
+      "depth": 6
+    },
+    {
+      "var": "dur_8",
+      "value": 4.0,
+      "consistent": true,
+      "violated": null,
+      "depth": 7
+    },
+    {
+      "var": "dur_2",
+      "value": 4.5,
+      "consistent": true,
+      "violated": null,
+      "depth": 8
+    },
+    {
+      "var": "dur_15",
+      "value": 3.5,
+      "consistent": true,
+      "violated": null,
+      "depth": 9
+    },
+    {
+      "var": "dur_6",
+      "value": 3.5,
+      "consistent": true,
+      "violated": null,
+      "depth": 10
+    },
+    {
+      "var": "dur_13",
+      "value": 3.5,
+      "consistent": true,
+      "violated": null,
+      "depth": 11
+    },
+    {
+      "var": "dur_13",
+      "value": 3.0,
+      "consistent": true,
+      "violated": null,
+      "depth": 11
+    },
+    {
+      "var": "dur_13",
+      "value": 4.0,
+      "consistent": true,
+      "violated": null,
+      "depth": 11
+    },
+    {
+      "var": "dur_13",
+      "value": 2.5,
+      "consistent": true,
+      "violated": null,
+      "depth": 11
+    },
+    {
+      "var": "dur_13",
+      "value": 4.5,
+      "consistent": true,
+      "violated": null,
+      "depth": 11
+    },
+    {
+      "var": "dur_0",
+      "value": 7.5,
+      "consistent": true,
+      "violated": null,
+      "depth": 12
+    }
+  ],
+  "cut_hint": 0,
+  "constraints": [
+    {
+      "name": "target_duration",
+      "description": "final duration within 30.0s \u00b1 1.0s",
+      "scope": [
+        "trans",
+        "dur_0",
+        "dur_2",
+        "dur_6",
+        "dur_8",
+        "dur_9",
+        "dur_10",
+        "dur_13",
+        "dur_15"
+      ]
+    },
+    {
+      "name": "min_scene_duration",
+      "description": "each kept scene >= 2.0s",
+      "scope": [
+        "dur_0",
+        "dur_2",
+        "dur_6",
+        "dur_8",
+        "dur_9",
+        "dur_10",
+        "dur_13",
+        "dur_15"
+      ]
+    },
+    {
+      "name": "within_source_bounds",
+      "description": "no clip longer than its source scene",
+      "scope": [
+        "dur_0",
+        "dur_2",
+        "dur_6",
+        "dur_8",
+        "dur_9",
+        "dur_10",
+        "dur_13",
+        "dur_15"
+      ]
+    },
+    {
+      "name": "at_least_one_scene",
+      "description": "at least one scene kept",
+      "scope": [
+        "dur_0",
+        "dur_2",
+        "dur_6",
+        "dur_8",
+        "dur_9",
+        "dur_10",
+        "dur_13",
+        "dur_15"
+      ]
+    },
+    {
+      "name": "export_dimensions_match_aspect",
+      "description": "WxH must be a supported profile for the aspect ratio",
+      "scope": [
+        "aspect",
+        "resolution"
+      ]
+    },
+    {
+      "name": "subtitle_in_safe_area",
+      "description": "subtitle baseline inside platform safe area",
+      "scope": [
+        "aspect",
+        "sub_pos"
+      ]
+    },
+    {
+      "name": "transition_fits_clips",
+      "description": "transition <= half of every clip it touches",
+      "scope": [
+        "trans",
+        "dur_0",
+        "dur_2",
+        "dur_6",
+        "dur_8",
+        "dur_9",
+        "dur_10",
+        "dur_13",
+        "dur_15"
+      ]
+    }
+  ],
+  "validation": {
+    "status": "valid",
+    "violations": [],
+    "checked": 11
+  }
+}

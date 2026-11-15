@@ -1,0 +1,290 @@
+{
+  "job_id": "job_0fd3efb8718f",
+  "original_duration": 120.0,
+  "final_duration_measured": 29.367,
+  "final_duration_planned": 29.31,
+  "target_duration": 30.0,
+  "duration_tolerance": 1.0,
+  "scenes_detected": 17,
+  "scenes_selected": 8,
+  "removed_segments": {
+    "scenes_removed": 9,
+    "silence_intervals_trimmed": 1,
+    "silence_seconds_trimmed": 2.35
+  },
+  "astar": {
+    "algorithm": "astar",
+    "optimal": true,
+    "nodes_expanded": 76,
+    "nodes_generated": 366,
+    "states_explored": 361,
+    "path_cost": 2.716678,
+    "chronological_cost": 2.716678,
+    "applied_order": [
+      0,
+      2,
+      6,
+      8,
+      9,
+      10,
+      13,
+      15
+    ],
+    "search_seconds": 0.003268
+  },
+  "csp": {
+    "status": "satisfied",
+    "nodes": 16,
+    "backtracks": 4,
+    "independent_validation": "valid",
+    "violations": []
+  },
+  "expert_rules_triggered": [
+    "G1",
+    "G2",
+    "G3",
+    "R1",
+    "R10",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R6b",
+    "R8",
+    "R9"
+  ],
+  "backward_chaining_vertical_reel_ready": true,
+  "subtitle_cues": 18,
+  "processing_seconds": {
+    "analysis": 19.07,
+    "planning": 0.043,
+    "render": 50.8
+  },
+  "output_verification": {
+    "ok": true,
+    "checks": [
+      {
+        "check": "file_exists",
+        "ok": true,
+        "detail": "51195589 bytes"
+      },
+      {
+        "check": "ffprobe_readable",
+        "ok": true,
+        "detail": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      {
+        "check": "container_mp4",
+        "ok": true,
+        "detail": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      {
+        "check": "video_codec_h264",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "check": "pixel_format_yuv420p",
+        "ok": true,
+        "detail": "yuv420p"
+      },
+      {
+        "check": "dimensions",
+        "ok": true,
+        "detail": "1080x1920 (expected 1080x1920)"
+      },
+      {
+        "check": "duration",
+        "ok": true,
+        "detail": "29.37s (expected 29.31s \u00b10.6)"
+      },
+      {
+        "check": "audio_stream",
+        "ok": true,
+        "detail": "has_audio=True"
+      },
+      {
+        "check": "full_decode_no_errors",
+        "ok": true,
+        "detail": "decoded cleanly"
+      }
+    ]
+  },
+  "job_kind": "final",
+  "warnings": [],
+  "wall_clock_seconds_end_to_end": 70.24,
+  "input_description": "Synthetic 120 s 1280x720 test video (FFmpeg patterns + tone bursts); transcript imported as SRT (Whisper weights unavailable offline)",
+  "scene_table": [
+    {
+      "scene_id": 0,
+      "start": 0.0,
+      "end": 7.5,
+      "importance": 60.47,
+      "speech_density": 1.0,
+      "silence_pct": 0.0,
+      "motion": 0.01348,
+      "transcript": "welcome to this introduction to artificial intelligence in video editing"
+    },
+    {
+      "scene_id": 1,
+      "start": 7.5,
+      "end": 15.0,
+      "importance": 40.25,
+      "speech_density": 0.4666,
+      "silence_pct": 53.34,
+      "motion": 0.01277,
+      "transcript": "today we explore how intelligent agents plan an edit"
+    },
+    {
+      "scene_id": 2,
+      "start": 15.0,
+      "end": 22.5,
+      "importance": 91.11,
+      "speech_density": 1.0,
+      "silence_pct": 0.0,
+      "motion": 0.02798,
+      "transcript": "first the agent perceives the video and detects every scene scene detection finds the cuts between shots"
+    },
+    {
+      "scene_id": 3,
+      "start": 22.5,
+      "end": 30.0,
+      "importance": 27.12,
+      "speech_density": 0.2,
+      "silence_pct": 80.0,
+      "motion": 0.01974,
+      "transcript": ""
+    },
+    {
+      "scene_id": 4,
+      "start": 30.0,
+      "end": 37.5,
+      "importance": 68.1,
+      "speech_density": 1.0,
+      "silence_pct": 0.0,
+      "motion": 0.00068,
+      "transcript": "next speech recognition produces a timestamped transcript"
+    },
+    {
+      "scene_id": 5,
+      "start": 37.5,
+      "end": 45.0,
+      "importance": 57.5,
+      "speech_density": 0.6,
+      "silence_pct": 40.0,
+      "motion": 0.00093,
+      "transcript": "each scene receives an importance score from many signals"
+    },
+    {
+      "scene_id": 6,
+      "start": 45.0,
+      "end": 52.5,
+      "importance": 67.65,
+      "speech_density": 1.0,
+      "silence_pct": 0.0,
+      "motion": 0.0,
+      "transcript": "the most important moments are selected for the final reel"
+    },
+    {
+      "scene_id": 7,
+      "start": 52.5,
+      "end": 60.0,
+      "importance": 11.96,
+      "speech_density": 0.0667,
+      "silence_pct": 93.33,
+      "motion": 0.0,
+      "transcript": ""
+    },
+    {
+      "scene_id": 8,
+      "start": 60.0,
+      "end": 66.25,
+      "importance": 81.25,
+      "speech_density": 1.0,
+      "silence_pct": 0.0,
+      "motion": 0.00987,
+      "transcript": "a star search orders the scenes to keep transitions smooth"
+    },
+    {
+      "scene_id": 9,
+      "start": 66.25,
+      "end": 72.5,
+      "importance": 70.65,
+      "speech_density": 0.6,
+      "silence_pct": 40.0,
+      "motion": 0.00828,
+      "transcript": "a constraint solver guarantees the duration and format rules"
+    },
+    {
+      "scene_id": 10,
+      "start": 72.5,
+      "end": 78.76,
+      "importance": 76.75,
+      "speech_density": 0.6006,
+      "silence_pct": 39.94,
+      "motion": 0.0337,
+      "transcript": "an expert system adds subtitles transitions and audio rules"
+    },
+    {
+      "scene_id": 11,
+      "start": 78.76,
+      "end": 85.04,
+      "importance": 74.68,
+      "speech_density": 1.0,
+      "silence_pct": 0.0,
+      "motion": 0.01259,
+      "transcript": "silence is removed but speech is always preserved"
+    },
+    {
+      "scene_id": 12,
+      "start": 85.04,
+      "end": 90.0,
+      "importance": 33.71,
+      "speech_density": 0.3951,
+      "silence_pct": 60.49,
+      "motion": 0.00977,
+      "transcript": ""
+    },
+    {
+      "scene_id": 13,
+      "start": 90.0,
+      "end": 97.5,
+      "importance": 65.94,
+      "speech_density": 0.9333,
+      "silence_pct": 6.67,
+      "motion": 0.0,
+      "transcript": "finally ffmpeg renders and verifies the exported video"
+    },
+    {
+      "scene_id": 14,
+      "start": 97.5,
+      "end": 105.0,
+      "importance": 11.19,
+      "speech_density": 0.0,
+      "silence_pct": 100.0,
+      "motion": 0.0,
+      "transcript": ""
+    },
+    {
+      "scene_id": 15,
+      "start": 105.0,
+      "end": 112.5,
+      "importance": 70.01,
+      "speech_density": 1.0,
+      "silence_pct": 0.0,
+      "motion": 0.01349,
+      "transcript": "the result is a short vertical reel ready to share"
+    },
+    {
+      "scene_id": 16,
+      "start": 112.5,
+      "end": 120.0,
+      "importance": 41.44,
+      "speech_density": 0.4667,
+      "silence_pct": 53.33,
+      "motion": 0.01277,
+      "transcript": "thank you for watching this demonstration"
+    }
+  ]
+}
